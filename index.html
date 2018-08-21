@@ -1,0 +1,80 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBk15PMsmNidKptPBvOwvtf-5T5pTdhZcI",
+        authDomain: "trainschedule-f0a60.firebaseapp.com",
+        databaseURL: "https://trainschedule-f0a60.firebaseio.com",
+        projectId: "trainschedule-f0a60",
+        storageBucket: "trainschedule-f0a60.appspot.com",
+        messagingSenderId: "688415261051"
+      };
+      firebase.initializeApp(config);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <h1 id="header1">Anytime is the Right Time</h1>
+            <h2 id="header2">She took the midnight train going anywhere!</h2>
+        </header>
+        <row>
+            <div id="TrainInfo" class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Current Train Schedule</th>
+                            </tr>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody id="trainData">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </row>
+
+        <row>
+            <div class="card">
+                <div class="card-header">
+                    Add Train
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="text" name="trainName" id="trainName" class="form-control" placeholder="">
+                        <label for="destination">Destination</label>
+                        <input type="text" name="destination" id="destination" class="form-control" placeholder="">
+                        <label for="trainTime">First Train Time (HH:mm - military Time)</label>
+                        <input type="text" name="trainTime" id="trainTime" class="form-control" placeholder="">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="text" name="frequency" id="frequency" class="form-control" placeholder="">
+                        <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>    
+        </row>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Moment Javascript -->
+    <script src="./assets/javascript/Moment.js"></script>
+</body>
+</html>
